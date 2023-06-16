@@ -9,6 +9,7 @@ setup:
 
 .PHONY: lint
 lint:
+	go fmt ./...
 	devtool lint
 
 .PHONY: build
