@@ -9,8 +9,11 @@ setup:
 
 .PHONY: lint
 lint:
-	go fmt ./...
 	devtool lint
+
+.PHONY: license
+license:
+	devtool license
 
 .PHONY: build
 build:
