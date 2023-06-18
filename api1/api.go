@@ -8,7 +8,6 @@ package api1
 import "github.com/osspkg/hermes-addons/base"
 
 type Api interface {
-	base.SchemaGetter
 	base.PkgNameGetter
 	base.VersionGetter
 	base.ServiceSetter
