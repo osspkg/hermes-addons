@@ -1,4 +1,4 @@
-package v1
+package api1
 
 type Info struct {
 	Name        string

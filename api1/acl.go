@@ -3,12 +3,14 @@
  *  Use of this source code is governed by a LGPL-3.0 license that can be found in the LICENSE file.
  */
 
-package v1
+package api1
 
-type UserGetter interface {
-	ID() uint64
-	Alias() string
-	Email() string
-	Name() string
-	Icon() string
+type ACLGetter interface {
+	Setup() []ACLModel
+}
+
+type ACLModel struct {
+	ID      uint
+	Title   string
+	FormIDs []uint
 }
