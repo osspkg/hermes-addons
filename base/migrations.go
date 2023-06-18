@@ -3,14 +3,15 @@
  *  Use of this source code is governed by a LGPL-3.0 license that can be found in the LICENSE file.
  */
 
-package hermesaddons
+package base
 
-type ACLGetter interface {
-	Setup() []ACLModel
+type MigrationsGetter interface {
+	Table() string
+	Data() []DatabaseMigration
 }
 
-type ACLModel struct {
-	ID      uint
-	Title   string
-	FormIDs []uint
+type DatabaseMigration struct {
+	ID   string
+	Up   string
+	Down string
 }

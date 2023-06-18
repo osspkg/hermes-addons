@@ -3,15 +3,12 @@
  *  Use of this source code is governed by a LGPL-3.0 license that can be found in the LICENSE file.
  */
 
-package hermesaddons
+package v1
 
-const (
-	Icon64  IconSize = 64
-	Icon128 IconSize = 128
-)
-
-type IconSize uint
-
-type IconGetter interface {
-	GetIcon(size IconSize) string
+type UserGetter interface {
+	ID() uint64
+	Alias() string
+	Email() string
+	Name() string
+	Icon() string
 }
