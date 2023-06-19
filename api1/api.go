@@ -12,7 +12,7 @@ type Api interface {
 	base.VersionGetter
 	base.ServiceSetter
 	base.IconGetter
-	Database() base.MigrationsGetter
+	Database() []base.DatabaseMigration
 
 	JsonRPCGetter
 	Info() Info
