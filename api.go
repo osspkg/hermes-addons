@@ -3,16 +3,15 @@
  *  Use of this source code is governed by a LGPL-3.0 license that can be found in the LICENSE file.
  */
 
-package api1
-
-import "github.com/osspkg/hermes-addons/base"
+package hermesaddons
 
 type Api interface {
-	base.PkgNameGetter
-	base.VersionGetter
-	base.ServiceSetter
-	base.IconGetter
-	Database() []base.DatabaseMigration
+	PkgNameGetter
+	VersionGetter
+	ServiceSetter
+	IconGetter
+	PipeSetter
+	Database() []DatabaseMigration
 
 	JsonRPCGetter
 	Info() Info

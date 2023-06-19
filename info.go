@@ -1,4 +1,4 @@
-package api1
+package hermesaddons
 
 type Info struct {
 	Name        string

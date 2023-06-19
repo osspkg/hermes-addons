@@ -3,8 +3,10 @@
  *  Use of this source code is governed by a LGPL-3.0 license that can be found in the LICENSE file.
  */
 
-package base
+package hermesaddons
 
-type PkgNameGetter interface {
-	PkgName() string
+type DatabaseMigration struct {
+	ID   string
+	Up   string
+	Down string
 }

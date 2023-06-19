@@ -3,14 +3,12 @@
  *  Use of this source code is governed by a LGPL-3.0 license that can be found in the LICENSE file.
  */
 
-package api1
+package hermesaddons
 
-type ACLGetter interface {
-	Setup() []ACLModel
-}
+import (
+	"context"
+)
 
-type ACLModel struct {
-	ID      uint
-	Title   string
-	FormIDs []uint
+type PipeSetter interface {
+	PipeCall(ctx context.Context, id uint, data []byte) ([]byte, error)
 }
