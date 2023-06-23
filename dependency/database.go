@@ -9,15 +9,10 @@ type (
 		TransactionContext(ctx context.Context, call func(v Tx)) error
 	}
 
-	Result interface {
-		RowsAffected() int64
-		LastInsertId() int64
-	}
-
 	Executor interface {
 		SQL(query string, args ...interface{})
 		Params(args ...interface{})
-		Bind(call func(result Result) error)
+		Bind(call func(rowsAffected, lastInsertId int64) error)
 	}
 
 	Scanner interface {
