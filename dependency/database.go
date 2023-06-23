@@ -4,9 +4,9 @@ import "context"
 
 type (
 	ORM interface {
-		ExecContext(name string, ctx context.Context, call func(q Executor)) error
-		QueryContext(name string, ctx context.Context, call func(q Querier)) error
-		TransactionContext(name string, ctx context.Context, call func(v Tx)) error
+		ExecContext(ctx context.Context, call func(q Executor)) error
+		QueryContext(ctx context.Context, call func(q Querier)) error
+		TransactionContext(ctx context.Context, call func(v Tx)) error
 	}
 
 	Result interface {
