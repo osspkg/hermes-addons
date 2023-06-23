@@ -8,6 +8,7 @@ package hermesaddons
 const (
 	Icon64  IconSize = 64
 	Icon128 IconSize = 128
+	Icon256 IconSize = 256
 )
 
 type IconSize uint
