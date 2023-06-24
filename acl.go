@@ -6,7 +6,7 @@
 package hermesaddons
 
 type ACLGetter interface {
-	Setup() []ACLModel
+	ACL() []ACLModel
 }
 
 type ACLModel struct {

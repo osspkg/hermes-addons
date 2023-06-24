@@ -5,6 +5,10 @@
 
 package hermesaddons
 
+type DatabaseGetter interface {
+	Database() []DatabaseMigration
+}
+
 type DatabaseMigration struct {
 	ID   string
 	Up   string

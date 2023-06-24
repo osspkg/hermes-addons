@@ -6,14 +6,8 @@
 package hermesaddons
 
 type Api interface {
-	PkgNameGetter
-	VersionGetter
 	ServiceSetter
-	IconGetter
-	PipeSetter
-	Database() []DatabaseMigration
-
+	DatabaseGetter
 	JsonRPCGetter
-	Info() Info
-	ACL() ACLGetter
+	ACLGetter
 }
