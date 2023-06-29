@@ -11,6 +11,5 @@ type DatabaseGetter interface {
 
 type DatabaseMigration struct {
 	ID   string
-	Up   string
-	Down string
+	Data string
 }
