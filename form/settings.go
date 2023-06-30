@@ -3,8 +3,12 @@
  *  Use of this source code is governed by a LGPL-3.0 license that can be found in the LICENSE file.
  */
 
-package dependency
+package form
 
-const (
-	Database = "com.osspkg.database"
-)
+func Body(getForm, setForm uint, next ...draw) draw {
+	return elementBody{
+		Get:  getForm,
+		Set:  setForm,
+		HTML: next,
+	}
+}
