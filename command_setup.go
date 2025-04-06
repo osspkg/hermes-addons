@@ -58,14 +58,6 @@ func (a *_addons) commandSetup() console.CommandGetter {
 				return w.SetField(rpc.FieldBody, b)
 			})
 
-			srv.AddHandler(MethodMenu, func(ctx context.Context, w rpc.Writer, r rpc.Reader) error {
-				b, err := json.Marshal(a.envs)
-				if err != nil {
-					return err
-				}
-				return w.SetField(rpc.FieldBody, b)
-			})
-
 			svc, ok := srv.(service)
 			if !ok {
 				console.Fatalf("fail start setup command")
